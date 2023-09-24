@@ -79,8 +79,8 @@ export class TodoService implements ITodoService {
 				success: true,
 				data: transformedTodos,
 				message: "Todos retrieved successfully.",
-				totalCount: transformedTodos.length, // Optional: Include the count of returned todos
-				pagination: paginationOptions, // Optional: Return the pagination detailseqwe45
+				totalCount: transformedTodos.length,
+				pagination: paginationOptions,
 			};
 		} catch (error) {
 			return { success: false, message: "Failed to fetch all todos." };
@@ -118,6 +118,7 @@ export class TodoService implements ITodoService {
 	async deleteTodo(id: string) {
 		try {
 			const result = await this.todoRepository.deleteById(id);
+
 			if (!result)
 				return {
 					success: false,

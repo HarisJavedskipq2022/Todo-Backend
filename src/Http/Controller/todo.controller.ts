@@ -82,7 +82,8 @@ export class TodoController {
 
 	deleteTask = async (req: Request, res: Response) => {
 		const validatedId = validateData({ id: req.params.id }, deleteTodoDTO);
-		const result = await this.todoService.deleteTodo(validatedId);
+
+		const result = await this.todoService.deleteTodo(validatedId.id);
 
 		if (result.success) {
 			res.status(200).json({
