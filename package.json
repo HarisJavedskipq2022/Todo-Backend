@@ -4,8 +4,8 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"start": "ts-node src/Bin/index.ts",
-		"dev": "nodemon -L src/Bin/index.ts",
+		"start": "ts-node Bin/index.ts",
+		"dev": "nodemon -L Bin/index.ts",
 		"test": "jest --detectOpenHandles"
 	},
 	"keywords": [],

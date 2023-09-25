@@ -9,7 +9,7 @@ import { deleteTodoDTO } from "../DTOs/TodoDtos/delete.dto";
 
 @injectable()
 export class TodoController {
-	constructor(@inject("TodoService") private todoService: TodoService) {}
+	constructor(@inject("ITodoService") private todoService: TodoService) {}
 
 	createTask = async (req: Request, res: Response) => {
 		const data = validateData(req.body, createTodoDTO);

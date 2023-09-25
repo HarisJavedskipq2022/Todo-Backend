@@ -1,12 +1,12 @@
-import { injectable, inject } from "inversify";
+import { inject, injectable } from "inversify";
 import { Todo } from "../../Domain/Entities/todo.entity";
-import { ITodoRepository } from "../../Infrastructure/Interfaces/ITodoRepository";
+import { TodoRepository } from "../../Infrastructure/Repositories/TodoRepository/todo.repository";
 import { ITodoService } from "../Interfaces/ITodoService";
 
 @injectable()
 export class TodoService implements ITodoService {
 	constructor(
-		@inject("TodoRepository") private todoRepository: ITodoRepository
+		@inject("ITodoRepository") private todoRepository: TodoRepository
 	) {}
 
 	async getTodoById(id: string) {

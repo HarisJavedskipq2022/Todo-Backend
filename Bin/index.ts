@@ -1,8 +1,8 @@
 import "reflect-metadata";
 import dotenv from "dotenv";
 import express from "express";
-import { connectToDatabase } from "../Infrastructure/Database/connection";
-import todoRouter from "../Http/Routes/todo";
+import { connectToDatabase } from "../src/Infrastructure/Database/connection";
+import todoRouter from "../src/Http/Routes/todo";
 import cors from "cors";
 
 dotenv.config();
