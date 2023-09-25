@@ -7,5 +7,5 @@ export const container = new Container({
 	defaultScope: "Singleton",
 });
 
-container.bind<TodoService>("ITodoService").to(TodoService);
-container.bind<TodoRepository>("ITodoRepository").to(TodoRepository);
+container.bind<TodoService>("TodoService").to(TodoService);
+container.bind<TodoRepository>("TodoRepository").to(TodoRepository);
